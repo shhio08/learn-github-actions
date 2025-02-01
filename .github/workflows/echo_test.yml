@@ -3,18 +3,18 @@ name: Put hello world
 on:
   pull_request:
     branches:
-      - '*'
+      - "*"
   workflow_dispatch:
-    
+
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - name: update apt-get
-      run: sudo apt-get update
+      - name: update apt-get
+        run: sudo apt-get update
 
-    - name: checkout
-      uses: actions/checkout@v3
+      - name: checkout
+        uses: actions/checkout@v3
 
-    - name: put hello world
-      run: cat hello.txt
+      - name: put hello world
+        run: make
